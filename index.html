@@ -32,7 +32,7 @@
       margin-bottom: 15px; 
     }
     
-    /* Контакты (3 карточки) */
+    /* Контакты */
     .cards { 
       display: grid; 
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -59,7 +59,6 @@
       border-color: rgba(0,212,255,0.3);
     }
     
-    /* Иконки */
     .icon { 
       font-size: 3.5em; 
       margin-bottom: 20px; 
@@ -85,7 +84,6 @@
     }
     .btn:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,212,255,0.4); }
     
-    /* Цвета контактов */
     .github { border-left: 4px solid #24292f; }
     .discord { border-left: 4px solid #5865f2; }
     .telegram { border-left: 4px solid #0088cc; }
@@ -185,7 +183,7 @@
       box-shadow: 0 10px 25px rgba(220,38,38,0.5); 
     }
     
-    /* СЧЕТЧИК ПОСЕЩЕНИЙ */
+    /* СЧЕТЧИК ПОСЕЩЕНИЙ - ОБНОВЛЕННЫЙ СТИЛЬ */
     .visitor-counter { 
       background: linear-gradient(145deg, rgba(0,212,255,0.15), rgba(0,153,204,0.1)); 
       backdrop-filter: blur(15px); 
@@ -204,14 +202,20 @@
       margin-bottom: 20px;
       text-shadow: 0 0 10px rgba(0,212,255,0.5);
     }
-    .visitor-counter img {
+    .counter-wrapper {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 15px;
       display: inline-block;
-      margin-top: 10px;
-      border-radius: 10px;
+      border: 1px solid rgba(0, 212, 255, 0.2);
+    }
+    .visitor-counter img {
+      display: block;
+      height: 45px;
       transition: transform 0.3s ease;
     }
     .visitor-counter img:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
     
     /* Footer */
@@ -226,7 +230,6 @@
     @keyframes gradientShift { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
     @keyframes iconFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
     
-    /* Responsive */
     @media (max-width: 768px) { 
       .hero h1 { font-size: 2.8em; } 
       .card { padding: 30px 20px; margin: 10px; }
@@ -236,17 +239,15 @@
 </head>
 <body>
   <div class="container">
-    <!-- Hero -->
     <section class="hero">
       <h1><i class="fas fa-terminal"></i> KAI-COP</h1>
     </section>
 
-    <!-- Контакты (только 3 карточки) -->
     <section class="cards">
       <div class="card github">
         <div class="icon"><i class="fab fa-github"></i></div>
         <h3>GitHub</h3>
-        <a href="https://github.com/KAI-COP" class="btn" target="_blank" style="background: linear-gradient(45deg, #24292f, #161b22);">
+        <a href="https://github.com/KAI-COP" class="btn" target="_blank" style="background: linear-gradient(45deg, #24292f, #161b22); color: white;">
           <i class="fab fa-github"></i> KAI-COP
         </a>
       </div>
@@ -254,7 +255,7 @@
       <div class="card discord">
         <div class="icon"><i class="fab fa-discord"></i></div>
         <h3>Discord</h3>
-        <a href="https://discord.com/users/kali4_rus" class="btn" target="_blank" style="background: linear-gradient(45deg, #5865f2, #4752c4);">
+        <a href="https://discord.com/users/kali4_rus" class="btn" target="_blank" style="background: linear-gradient(45deg, #5865f2, #4752c4); color: white;">
           <i class="fab fa-discord"></i> kali4_rus
         </a>
       </div>
@@ -262,13 +263,12 @@
       <div class="card telegram">
         <div class="icon"><i class="fab fa-telegram-plane"></i></div>
         <h3>Telegram</h3>
-        <a href="https://t.me/global_050" class="btn" target="_blank" style="background: linear-gradient(45deg, #0088cc, #006ba0);">
+        <a href="https://t.me/global_050" class="btn" target="_blank" style="background: linear-gradient(45deg, #0088cc, #006ba0); color: white;">
           <i class="fab fa-telegram-plane"></i> @global_050
         </a>
       </div>
     </section>
 
-    <!-- Знания -->
     <section class="skills">
       <h2><i class="fas fa-brain"></i> Мои знания</h2>
       <div class="skills-grid">
@@ -276,12 +276,11 @@
         <div class="skill-tag">Python</div>
         <div class="skill-tag">C</div>
         <div class="skill-tag">Git</div>
-        <div class="skill-tag">reverse engineering</div>
+        <div class="skill-tag">Reverse Engineering</div>
         <div class="skill-tag">Shell</div>
       </div>
     </section>
 
-    <!-- ПРОЕКТЫ -->
     <section class="projects">
       <h2><i class="fas fa-dragon"></i> Мои проекты</h2>
       <div class="project-card">
@@ -296,12 +295,14 @@
       </div>
     </section>
 
-    <!-- СЧЕТЧИК ПОСЕЩЕНИЙ -->
     <section class="visitor-counter">
       <h2><i class="fas fa-chart-line"></i> Посещений сайта</h2>
-      <a href="https://hits.seeyoufarm.com">
-        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkai-cop.github.io&count_bg=%2300D4FF&title_bg=%231A1A2E&icon=&icon_color=%23E7E7E7&title=Всего&edge_flat=false" alt="Visitor Count"/>
-      </a>
+      <div class="counter-wrapper">
+        <img src="https://top-fwz1.mail.ru/counter?id=2025;t=479;l=1" alt="test">
+      </div>
+      <p style="margin-top: 15px; font-size: 0.85em; color: #00d4ff; opacity: 0.7;">
+        Статистика обновляется в реальном времени
+      </p>
     </section>
   </div>
 
