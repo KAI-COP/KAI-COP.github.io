@@ -126,7 +126,7 @@
       transform: translateY(-5px); 
     }
     
-    /* НОВЫЙ РАЗДЕЛ - ПРОЕКТЫ */
+    /* ПРОЕКТЫ */
     .projects { 
       background: linear-gradient(145deg, rgba(40,20,20,0.9), rgba(15,5,5,0.95)); 
       backdrop-filter: blur(20px); 
@@ -185,6 +185,35 @@
       box-shadow: 0 10px 25px rgba(220,38,38,0.5); 
     }
     
+    /* СЧЕТЧИК ПОСЕЩЕНИЙ */
+    .visitor-counter { 
+      background: linear-gradient(145deg, rgba(0,212,255,0.15), rgba(0,153,204,0.1)); 
+      backdrop-filter: blur(15px); 
+      border-radius: 20px; 
+      padding: 40px; 
+      margin: 60px auto; 
+      max-width: 500px;
+      text-align: center;
+      border: 1px solid rgba(0,212,255,0.3);
+      box-shadow: 0 10px 30px rgba(0,212,255,0.2);
+      animation: fadeInUp 1.2s ease-out 0.7s both;
+    }
+    .visitor-counter h2 { 
+      font-size: 1.8em; 
+      color: #00d4ff; 
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(0,212,255,0.5);
+    }
+    .visitor-counter img {
+      display: inline-block;
+      margin-top: 10px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .visitor-counter img:hover {
+      transform: scale(1.05);
+    }
+    
     /* Footer */
     footer { 
       text-align: center; 
@@ -201,6 +230,7 @@
     @media (max-width: 768px) { 
       .hero h1 { font-size: 2.8em; } 
       .card { padding: 30px 20px; margin: 10px; }
+      .visitor-counter { padding: 30px 20px; }
     }
   </style>
 </head>
@@ -251,7 +281,7 @@
       </div>
     </section>
 
-    <!-- НОВЫЙ РАЗДЕЛ ПРОЕКТЫ -->
+    <!-- ПРОЕКТЫ -->
     <section class="projects">
       <h2><i class="fas fa-dragon"></i> Мои проекты</h2>
       <div class="project-card">
@@ -264,6 +294,14 @@
           <i class="fab fa-github"></i> HYDRA-USER-BOT
         </a>
       </div>
+    </section>
+
+    <!-- СЧЕТЧИК ПОСЕЩЕНИЙ -->
+    <section class="visitor-counter">
+      <h2><i class="fas fa-chart-line"></i> Посещений сайта</h2>
+      <a href="https://hits.seeyoufarm.com">
+        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fkai-cop.github.io&count_bg=%2300D4FF&title_bg=%231A1A2E&icon=&icon_color=%23E7E7E7&title=Всего&edge_flat=false" alt="Visitor Count"/>
+      </a>
     </section>
   </div>
 
